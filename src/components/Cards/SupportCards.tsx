@@ -1,7 +1,5 @@
 import React from "react";
-import Card from "./Card";
-import FooterColumn from "../Footer/FooterColumn";
-import BookDemo from "./BookDemo";
+import {Card, FooterColumn, BookDemo} from "../../components/index";
 import {DigitalAssetsicon} from "../../assets/index"
 
 

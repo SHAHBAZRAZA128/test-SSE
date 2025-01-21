@@ -2,7 +2,7 @@ import ButtonField from "./ButtonField"
 import {Dashboard1 , Dashboard2 , Mobile} from "../assets/index"
 
 
-const ExplorePlatform:React.FC = ()=>{
+const ExplorePlatformSection:React.FC = ()=>{
     return(
         
        <div className=" flex flex-col justify-between items-center mt-28 ">
@@ -22,4 +22,4 @@ const ExplorePlatform:React.FC = ()=>{
       
     )
    }
-   export default ExplorePlatform
+   export default ExplorePlatformSection

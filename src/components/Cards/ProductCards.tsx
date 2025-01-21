@@ -1,8 +1,8 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "./Card";
-import BookDemo from "./BookDemo";
+import {Card} from "../../components/index";
+import {BookDemo} from "../../components/index";
 import {DigitalAssetsicon ,  OperationPlatformUpdatedImg} from "../../assets/index"
 
 

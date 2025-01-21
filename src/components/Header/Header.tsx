@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import ProductCards from "../Cards/ProductCards";
-import SolutionCards from "../Cards/SolutionCards";
-import SupportCards from "../Cards/SupportCards";
+import {ProductCards , SolutionCards ,SupportCards,ButtonField } from "../../components/index";
 import {SafetyCulturelogo} from "../../assets/index"
-import ButtonField from "../ButtonField";
+
 
 
 const Header: React.FC = () => {

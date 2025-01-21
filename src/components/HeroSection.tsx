@@ -1,4 +1,4 @@
-import ButtonField from "./ButtonField";
+import {ButtonField} from "../components/index";
 import { Slide1,Inspection , ManageAssets } from "../assets/index"
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
                             className="rounded-2xl" />
                         <ButtonField
                             text="Book a demo"
-                            className="bg-white rounded-2xl hover:bg-gray-100  text-blue-600 border border-gray-200" />
+                            className="bg-white rounded-2xl hover:bg-gray-100 text-blue-800 border border-gray-200" />
 
                     </div>
                     

@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { SafetyCulturelogo, Closeicon , ConversationEmpty,Chaticon } from "../assets/index"
-import {  } from "../assets/index"
 import Button from "./ButtonField";
 
 

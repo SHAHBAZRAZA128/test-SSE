@@ -1,6 +1,6 @@
 
 import {Toyota , Marriot, KrispyKreme , JetBlue , JohnDeere , Aecom} from "../assets/index"
-const Partners:React.FC = ()=>{
+const PartnersSection:React.FC = ()=>{
  return(
     <div className="mt-[580px] w-28 space-x-24 flex justify-between items-center mx-36">
         <img src={Toyota} alt="" />
@@ -12,4 +12,4 @@ const Partners:React.FC = ()=>{
     </div>
  )
 }
-export default Partners
+export default PartnersSection

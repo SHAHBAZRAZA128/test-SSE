@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import FooterColumn from "./FooterColumn";
-import FooterAds from "./FooterAds";
+import {FooterColumn , FooterAds} from "../../components/index";
 import {SafetyCulturelogo ,Sheqsylogo} from "../../assets/index"
 
 
