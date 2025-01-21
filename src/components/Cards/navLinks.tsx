@@ -10,7 +10,7 @@ interface NavLink {
     links: NavLink[];
   }
   
-  const LinksList: React.FC<LinksListProps> = ({ links }) => {
+  const NavLinks: React.FC<LinksListProps> = ({ links }) => {
     return (
       <ul className="space-y-4 mt-4">
         {links.map((link, index) => (
@@ -24,5 +24,5 @@ interface NavLink {
     );
   };
   
-  export default LinksList;
+  export default NavLinks;
   

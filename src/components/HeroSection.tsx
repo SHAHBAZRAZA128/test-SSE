@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
             <div className="mb-8 ">
            <img className=" px-6 absolute rounded-xl  top-[350px] z-10 h-full object-cover " src={Slide1} alt="" />
             <img className="absolute w-60 z-30 bottom-[-40px] left-40" src={Inspection} alt="" />
-            <img className="absolute w-60 z-30 right-52 bottom-[-150px] " src={ManageAssets} alt="" />
+            <img className="absolute w-60 z-30 right-52 bottom-[-150px] "  src={ManageAssets} alt="" />
             <p className= "bg-gray-800 text-sm z-30 bg-opacity-50 absolute text-white bottom-[-320px] left-[530px] p-4 rounded-lg">Clearwell Dynamics | <Link to="/" >Read customer story <span className=" font-semibold inline-block ">
           →
         </span> </Link></p>

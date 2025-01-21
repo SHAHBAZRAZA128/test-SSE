@@ -1,5 +1,5 @@
 
-import {ExplorePlatformSection , Chat, Footer , Header , HeroSection, PartnersSection} from "../components/index"
+import {ExplorePlatformSection , Chat, Footer , Header , HeroSection, PartnersSection , MoreFeaturesSection, FeatureCardsSection, GoalsSection } from "../components/index"
 
 const HomePage: React.FC = () => {
     return (
@@ -8,8 +8,11 @@ const HomePage: React.FC = () => {
             <HeroSection />
             <PartnersSection />
             <ExplorePlatformSection />
+            <FeatureCardsSection />
+            <MoreFeaturesSection />
+            <GoalsSection />
             <Chat />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
