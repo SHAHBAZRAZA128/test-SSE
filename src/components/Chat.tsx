@@ -1,7 +1,8 @@
 
 import { useState } from "react";
 import { SafetyCulturelogo, Closeicon , ConversationEmpty,Chaticon } from "../assets/index"
-import Button from "./ButtonField";
+import {ButtonField} from "../components/index";
+import { useNavigate } from "react-router-dom";
 
 
 const Chat: React.FC = () => {
@@ -10,11 +11,11 @@ const Chat: React.FC = () => {
     const toggleChat = () => {
         setisChatOpen(!isChatOpen);
     };
-
+    const navigation = useNavigate();
     return (
-        <div className="relative z-0 ">
+        <div className="relative ">
             {isChatOpen ? (
-                <div className={`bg-gray-100 h-[550px] w-[380px] sticky z-[40] right-12 bottom-[70px] rounded-xl shadow-xl border-2  border-b-2 `}>
+                <div className={`bg-gray-100 h-[550px] w-[380px] fixed z-[60] right-12 bottom-[70px] rounded-xl shadow-xl border-2  border-b-2  group-hover:translate-y-[-5px] transform transition-all duration-100`}>
                     <div className="h-40 flex flex-col justify-between items-center px-8">
                         <img className="w-4 h-4 mt-4 relative left-40 rounded-full" 
                         src={Closeicon} 
@@ -29,7 +30,8 @@ const Chat: React.FC = () => {
                         <img className=" mt-14" src={ConversationEmpty} alt="" />
                         <h1 className="text-gray-800 font-medium leading-none mt-4">No Conversation yet</h1>
                         <p className="mb-20 text-sm mt-2 text-gray-800">Your exisiting conversation will be here.</p>
-                        <Button
+                        <ButtonField
+                        onclick={()=> navigation("/new-conversation")}
                             text="New Conversation"
                             className="px-16 mb-4" />
                             <div className="text-gray-500">kostomer</div>
@@ -38,13 +40,13 @@ const Chat: React.FC = () => {
                 </div>
             ) : (
                 <div
-                    className="bg-blue-500 w-12 h-12 rounded-full fixed bottom-4 right-4 flex justify-center items-center cursor-pointer"
+                    className="bg-blue-500 translate-y-2 hover:translate-y-0 transition-transform duration-300 w-[60px] h-[60px]  z-40 rounded-full fixed bottom-8 right-8 flex justify-center items-center cursor-pointer "
                     onClick={toggleChat}
                 >
                     <img
-                        src={Chaticon} // Use a chat icon here instead
+                        src={Chaticon} 
                         alt="Chat Icon"
-                        className="w-6 h-6"
+                        className=""
                     />
                 </div>
             )}

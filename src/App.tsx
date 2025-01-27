@@ -1,14 +1,18 @@
-import HomePage from "./pages/HomePage"
+
+
+import AppRouter from "./Routes/AppRouter"
 
 
 
-const App:React.FC = () =>{
-  
+const App: React.FC = () => {
+
   return (
-    <>
-    <HomePage />
-    
-    </>
+    <div>
+      <AppRouter />
+    </div>
+
+
+
   )
 }
 

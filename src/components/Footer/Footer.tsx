@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {FooterColumn , FooterAds} from "../../components/index";
-import {SafetyCulturelogo ,Sheqsylogo} from "../../assets/index"
+import { FooterColumn, FooterAds } from "../../components/index";
+import { LinkedInicon, SafetyCulturelogo, Sheqsylogo, Twittericon } from "../../assets/index"
 
 
 
@@ -15,44 +15,65 @@ const Footer: React.FC = () => {
         { heading: "Company", links: ["About", "Careers", "News Room", "Brand Partnerships", "Meat the leadership team", "Events"] },
     ]
 
+
     return (
-        <footer className=" pl-8 z-0">
-            <div className="max-w-7xl max-auto grid grid-cols-4">
+        <footer className=" ">
+            <div className="max-w-7xl max-auto grid grid-cols-4 pl-16">
                 {footerData.map((column, index) => (
                     <FooterColumn key={index}
                         heading={column.heading}
-                        links={column.links} />
+                        links={column.links}
+                        className="text-lg" />
                 )
                 )}
             </div>
-            <div className="flex   gap-6 justify-center items-center  min-h-screen">
+            <div className="flex   gap-6 justify-center items-center my-16 ">
 
-            <FooterAds
-                logo={SafetyCulturelogo}
-                appStoreLink="https://apps.apple.com"
-                googlePlayLink="https://play.google.com"
-            />
+                <FooterAds
+                    logo={SafetyCulturelogo}
+                    appStoreLink="https://apps.apple.com"
+                    googlePlayLink="https://play.google.com"
+                />
 
-            <FooterAds
-                logo={Sheqsylogo}               
-                appStoreLink="https://apps.apple.com"
-                googlePlayLink="https://play.google.com"
-            />
-        </div>
-    
-      
-            <div className="mt-0">
-                <Link to="/status" className="ml-6 pr-1 text-gray-600 hover:underline hover:text-[#6559ff]">Status</Link>  |
-                <Link to="/" className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Legal</Link> |
-                <Link to="/"  className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Terms and Conditions</Link> |
-                <Link to="/"  className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Privacy Portal</Link> |
-                <Link to="/"  className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Security</Link> |
-                <span  className="p-1 text-gray-600 ">&copy; SafetyCulture 2025</span> 
+                <FooterAds
+                    logo={Sheqsylogo}
+                    appStoreLink="https://apps.apple.com"
+                    googlePlayLink="https://play.google.com"
+                />
+            </div>
+
+
+            <div className="bg-gray-200 w-full  p-6 pl-12 flex justify-between">
+                <div className="">
+                    <Link to="/status" className=" pr-1 text-gray-600 hover:underline hover:text-[#6559ff]">Status</Link>  |
+                    <Link to="/legal" className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Legal</Link> |
+                    <Link to="/terms-and-conditions" className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Terms and Conditions</Link> |
+                    <Link to="/privacy-portal" className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Privacy Portal</Link> |
+                    <Link to="/security" className="p-1 text-gray-600 hover:underline hover:text-[#6559ff]">Security</Link> |
+                    <span className="p-1 text-gray-600 ">&copy; SafetyCulture 2025</span>
+                </div>
+                <div className="flex gap-2 pr-6">
+                    <a href="https://pk.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={LinkedInicon} alt="LinkedIn Icon" />
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={Twittericon} alt="LinkedIn Icon" />
+                    </a>
+                    <a href="https://pk.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={LinkedInicon} alt="LinkedIn Icon" />
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={Twittericon} alt="LinkedIn Icon" />
+                    </a>
+        
+
+                </div>
+
             </div>
 
 
 
-        </footer>  
+        </footer>
 
 
 
