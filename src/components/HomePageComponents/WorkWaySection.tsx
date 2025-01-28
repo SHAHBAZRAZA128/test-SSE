@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { BrentfordFootball, Circles, Construction, DbSchenker, Hospatality, HPBrentford, HPlevel, HPSchenker, HPWaldorf, Level10, Lowes, Management, MarleyPhoto, MarleySpoon, Retail, Transport, WaldorfAstoria } from "../assets/index"
-import { WorkwayCard, WorkwaysDetailsCard } from "../components/index"
+import { BrentfordFootball, Circles, Construction, DbSchenker, Hospatality, HPBrentford, HPlevel, HPSchenker, HPWaldorf, Level10, Lowes, Management, MarleyPhoto, MarleySpoon, Retail, Transport, WaldorfAstoria } from "../../assets/index"
+import { WorkwayCard, WorkwaysDetailsCard } from "../index"
 
 
 
@@ -109,9 +109,9 @@ const WorkWaySection = () => {
 
                 {selectedCard && (() => {
                     const filteredItems = clickedCardItemsDetails.filter((item) => item.cardName === selectedCard);
-                    console.log("Filtered Items:", filteredItems);
+                   
                     return filteredItems.map((item, index) => {
-                        console.log("Rendering Item:", item, "Index:", index); // Debugging index and item
+                       
                         return (
                             <WorkwaysDetailsCard
                                 key={index}

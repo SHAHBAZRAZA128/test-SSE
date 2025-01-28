@@ -1,5 +1,5 @@
-import { BelowArrow } from "../assets/index"
-import { GoalsCard } from "../components/index"
+import { BelowArrow } from "../../assets/index"
+import { GoalsCard } from "../index"
 import { Link, useLocation } from "react-router-dom"
 import { useEffect } from "react"
 

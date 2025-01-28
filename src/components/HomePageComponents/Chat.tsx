@@ -1,8 +1,8 @@
 
 import { useState } from "react";
-import { SafetyCulturelogo, Closeicon , ConversationEmpty,Chaticon } from "../assets/index"
-import {ButtonField} from "../components/index";
-import { useNavigate } from "react-router-dom";
+import { SafetyCulturelogo, Closeicon , ConversationEmpty,Chaticon } from "../../assets/index"
+import {ButtonField} from "../index";
+
 
 
 const Chat: React.FC = () => {
@@ -11,7 +11,7 @@ const Chat: React.FC = () => {
     const toggleChat = () => {
         setisChatOpen(!isChatOpen);
     };
-    const navigation = useNavigate();
+   
     return (
         <div className="relative ">
             {isChatOpen ? (
@@ -31,7 +31,8 @@ const Chat: React.FC = () => {
                         <h1 className="text-gray-800 font-medium leading-none mt-4">No Conversation yet</h1>
                         <p className="mb-20 text-sm mt-2 text-gray-800">Your exisiting conversation will be here.</p>
                         <ButtonField
-                        onclick={()=> navigation("/new-conversation")}
+                        path="/new-conversation"
+
                             text="New Conversation"
                             className="px-16 mb-4" />
                             <div className="text-gray-500">kostomer</div>

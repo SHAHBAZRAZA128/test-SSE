@@ -1,15 +1,12 @@
-import { BookDemo, ButtonField } from "../components/index";
-import { TennisAustralia, UI1, UI2 } from "../assets/index"
-import { Link, useNavigate } from "react-router-dom";
+import { BookDemoButton, ButtonField } from "../index";
+import { TennisAustralia, UI1, UI2 } from "../../assets/index"
+import { Link } from "react-router-dom";
 
 
 
 
 const HeroSection: React.FC = () => {
-    const navigate = useNavigate();
-    const handleClick = (path: string) => {
-        navigate(path);
-    }
+    
     return (
         <div>
             <div className="bg-white  flex flex-col justify-between items-center mt-4 z-0 border-black ">
@@ -19,10 +16,11 @@ const HeroSection: React.FC = () => {
                     <p className="w-[550px] mb-2 text-gray-800 text-xl">Give your teams the knowledge,tools and confidence to work <span className="block text-center">safely, meet higher standards, and improve everyday.</span> </p>
                     <div className="space-x-4 flex py-8">
                         <ButtonField
-                            onclick={() => handleClick("/sign-up")}
+                        path="/sign-up"
+                           
                             text="Sign Up for free"
                             className="rounded-xl" />
-                        <BookDemo
+                        <BookDemoButton
                             className="border-2 px-4 py-2 rounded-xl font-normal !text-blue-800 hover:bg-gray-200" />
 
                     </div>

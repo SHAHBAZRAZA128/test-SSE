@@ -1,8 +1,8 @@
 
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Card } from "../../components/index";
-import { BookDemo } from "../../components/index";
+import { Card } from "../index";
+import { BookDemoButton } from "../index";
 import { arrow, DigitalAssetsicon, Inspectionicon, OperationPlatformUpdatedImg, Puzzleicon, Signalicon, Trainingicon, } from "../../assets/index"
 
 
@@ -102,7 +102,7 @@ const ProductCards: React.FC = () => {
 
         </div>
         <div className="py-8">
-        <BookDemo 
+        <BookDemoButton 
         image={arrow}/>
         </div>
        

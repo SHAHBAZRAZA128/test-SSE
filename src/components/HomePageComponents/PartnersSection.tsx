@@ -1,5 +1,5 @@
 
-import {Toyota , Marriot, KrispyKreme , JetBlue , JohnDeere , Aecom} from "../assets/index"
+import {Toyota , Marriot, KrispyKreme , JetBlue , JohnDeere , Aecom} from "../../assets/index"
 const PartnersSection:React.FC = ()=>{
  return(
     <div className="mt-[580px] w-28 space-x-24 flex justify-between items-center mx-36">

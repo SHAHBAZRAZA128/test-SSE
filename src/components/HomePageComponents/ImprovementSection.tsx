@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom"
-import { AppStoreicon, BarChat, ChartSquare, GooglePlayicon, Mobile1, SpeedoMeter, ZapFast } from "../assets/index"
+import { AppStoreicon, BarChat, ChartSquare, GooglePlayicon, Mobile1, SpeedoMeter, ZapFast } from "../../assets/index"
 
 
-import {BookDemo , ButtonField} from "../components/index"
+import {BookDemoButton , ButtonField} from "../index"
 
 
 const ImprovementSection = () => {
@@ -25,10 +25,11 @@ const ImprovementSection = () => {
                 </ul>
                 <div className="pt-8 space-x-4 flex">
                     <ButtonField
-                    onclick={() =>navigation("/sign-up")}
+                    path="/sign-up"
+                   
                         text="Get Started for free"
                         className="bg-yellow-400 !text-blue-900 hover:bg-yellow-200" />
-                    <BookDemo
+                    <BookDemoButton
                    className=" border bg-white px-4 py-2 rounded-xl text-[15px]  !text-blue-600 hover:bg-gray-200" />
                 </div>
                 <div className="flex space-x-4 pt-6 ">

@@ -1,6 +1,6 @@
 
-import {CustomerStory} from "./index"
-import { StreamlineOperations , ShiftRealationship , MakeDecision } from "../assets/index"
+import {CustomerStory} from "../index"
+import { StreamlineOperations , ShiftRealationship , MakeDecision } from "../../assets/index"
 import { Link } from "react-router-dom"
 
 const CustomerStories = () => {

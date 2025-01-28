@@ -1,6 +1,6 @@
 
-import {CustomerReview, CustomerStoriesSection, ImprovementSection, WorkWaySection} from "../components/index"
-import {ExplorePlatformSection , Chat, Footer , Header , HeroSection, PartnersSection , MoreFeaturesSection, FeatureCardsSection, GoalsSection } from "../components/index"
+import {CustomerReviewSection, CustomerStoriesSection, ImprovementSection, WorkWaySection} from "../components/index"
+import {ExplorePlatformSection , Chat , HeroSection, PartnersSection , MoreFeaturesSection, FeatureCardsSection, GoalsSection } from "../components/index"
 
 const HomePage: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
             <FeatureCardsSection />
             <MoreFeaturesSection />
             <GoalsSection />
-            <CustomerReview />
+            <CustomerReviewSection />
             <CustomerStoriesSection />
             <WorkWaySection />
             <ImprovementSection />

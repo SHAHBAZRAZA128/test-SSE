@@ -1,5 +1,5 @@
-import { FeaturesCard, MoreFeaturesCard } from "../components/index"
-import { Signalicon, Puzzleicon, Sparkleicon } from "../assets/index"
+import {  MoreFeaturesCard } from "../index"
+import { Signalicon, Puzzleicon, Sparkleicon } from "../../assets/index"
 
 
 const MoreFeaturesSection: React.FC = () => {

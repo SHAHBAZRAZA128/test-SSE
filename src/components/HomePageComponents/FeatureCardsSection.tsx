@@ -1,6 +1,6 @@
 
-import { FeaturesCard } from "../components/index"
-import { Inspectionicon , Trainingicon , Cubeicon ,Notificationicon , CircleCheckicon , Ruporicon} from "../assets/index"
+import { FeaturesCard } from "../index"
+import { Inspectionicon , Trainingicon , Cubeicon ,Notificationicon , CircleCheckicon , Ruporicon} from "../../assets/index"
 
 
 const FeatureCardsSection: React.FC = () => {

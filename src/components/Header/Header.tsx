@@ -148,7 +148,8 @@ const Header: React.FC = () => {
           </div>
 
           <ButtonField text="Sign up for free"
-         onclick={()=>handleNavigation("/sign-up")}/>
+          path="/sign-up"
+         />
         </div>
       </div>
 

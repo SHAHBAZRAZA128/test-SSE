@@ -1,7 +1,7 @@
 
-import React, { useState } from "react";
-import { Card, BookDemo, FooterColumn } from "../../components/index";
-import { arrow, DigitalAssetsicon, Enterprise } from "../../assets/index"
+
+import { Card, BookDemoButton,  ColumnLinks } from "../index";
+import { arrow,  Enterprise } from "../../assets/index"
 import { useNavigate } from "react-router-dom";
 
 
@@ -37,7 +37,7 @@ const SolutionCard: React.FC = () => {
             `}
             >
               <div className="flex items-center space-x-2 ">
-                <FooterColumn
+                <ColumnLinks
                   heading={column.heading}
                   links={column.links}
                   path={column.path}
@@ -61,7 +61,7 @@ const SolutionCard: React.FC = () => {
             style={{ width: '330px', height: '400px' }} />
 
           <div className="py-8">
-            <BookDemo
+            <BookDemoButton
               image={arrow} />
           </div>
 

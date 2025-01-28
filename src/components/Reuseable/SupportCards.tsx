@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, FooterColumn, BookDemo} from "../../components/index";
+import {Card,  BookDemoButton, ColumnLinks} from "../index";
 import {arrow, Community, Contactus, Helpcenter} from "../../assets/index"
 import { useNavigate } from "react-router-dom";
 
@@ -49,7 +49,7 @@ const handleNavigation =(path:string) => {
         >
           <div className="flex items-center space-x-2">
           
-            <FooterColumn
+            <ColumnLinks
             
               heading="Resources"
               links={['Blog', 'Certification', 'Digitize your forms', 'Developer Portal', 'Partner Program', 'Events and Webinars']}
@@ -60,7 +60,7 @@ const handleNavigation =(path:string) => {
           </div>
         </div>
         <div className="py-8">
-                <BookDemo 
+                <BookDemoButton
                 image={arrow}/>
                 </div>
                

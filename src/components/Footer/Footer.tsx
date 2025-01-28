@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { FooterColumn, FooterAds } from "../../components/index";
+import {  ColumnLinks, FooterAds } from "../../components/index";
 import { LinkedInicon, SafetyCulturelogo, Sheqsylogo, Twittericon } from "../../assets/index"
 
 
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         <footer className=" ">
             <div className="max-w-7xl max-auto grid grid-cols-4 pl-16">
                 {footerData.map((column, index) => (
-                    <FooterColumn key={index}
+                    <ColumnLinks key={index}
                         heading={column.heading}
                         links={column.links}
                         className="text-lg" />

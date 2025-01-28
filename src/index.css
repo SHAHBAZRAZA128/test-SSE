@@ -8,7 +8,53 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html, #root {
-    height: 100%;
-    margin: 0;
-  }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Scrollbar ki width */
+  border-radius: 10px; /* Gol scrollbar edges */
+ 
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb (jo move karta hai) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  height: 70px;
+ width: 10px;
+}
+
+/* Scrollbar thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Scrollbar Up and Down Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #f1f1f1;
+  display: block;
+  height: 20px; /* Increased the height of the button */
+  width: 20px; 
+  border-radius: 10px;
+}
+
+/* Up Arrow */
+::-webkit-scrollbar-button:single-button:decrement {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray"><path d="M7 14l5-5 5 5H7z"/></svg>') no-repeat center;
+  background-size: contain;
+  background-size: 20px 20px;
+}
+
+/* Down Arrow */
+::-webkit-scrollbar-button:single-button:increment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray"><path d="M7 10l5 5 5-5H7z"/></svg>') no-repeat center;
+  background-size: contain;
+  background-size: 20px 20px;
+}

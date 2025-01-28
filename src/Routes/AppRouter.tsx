@@ -1,5 +1,6 @@
 
 
+import { ScrollToTop } from "../components/index"
 import MainLayout from "../../src/Layout/MainLayout"
 
 import { HomePage, CustomersPage, PricingPage, InspectionPage, IntegrationPage, AssetsPage, MonitoringPage, TrainingPage, PlatformPage, LoneworkerPage, MarketplacePage, InsurancePage, DocumentationPage, MiningPage, ConstructionPage, ManufacturingPage, FacilitiesPage, HospatalityPage, TransportPage, SustainabilityPage, HealthandSafetyPage, RiskandCompliancePage, OperationalPage, RetailPage, EnterprisePage, HelpCenterPage, ContactusPage, CommunityPage, SignupPage, LoginPage } from "../pages/index"
@@ -11,6 +12,8 @@ import { Route,  Routes } from "react-router-dom"
 const AppRouter: React.FC = () => {
     return (
         
+        <>
+                <ScrollToTop />
             <Routes>
                 <Route element={<MainLayout />} >
                     <Route path="/" element={<HomePage />} />
@@ -46,6 +49,7 @@ const AppRouter: React.FC = () => {
                     <Route path="/login" element={<LoginPage />} />
 
             </Routes>
+        </>
 
        
 

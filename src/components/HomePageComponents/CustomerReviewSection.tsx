@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom"
-import { HomePageAO, Comas } from "../assets/index"
-import { ButtonField } from "../components/index"
 
-const CustomerReview = () => {
-    const navigator = useNavigate();
+import { HomePageAO, Comas } from "../../assets/index"
+import { ButtonField } from "../index"
+
+const CustomerReviewSection = () => {
+   
     return (
         <div className=" text-white mb-[800px]">
             <div className="relative z-30">
@@ -16,7 +16,8 @@ const CustomerReview = () => {
                     <p className="text-[16px] font-medium text-gray-200 pb-6">CEO and Director of Tennis Australia</p>
                 </div>
                 <ButtonField
-                onclick={()=>navigator("/australian-open")}
+                path="/australian-open"
+               
                     text="Find out how Australian Open uses SafetyCulture"
                     className="text-left " />
             </div>
@@ -27,4 +28,4 @@ const CustomerReview = () => {
         </div>
     )
 }
-export default CustomerReview
+export default CustomerReviewSection
