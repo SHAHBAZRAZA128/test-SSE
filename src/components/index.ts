@@ -30,8 +30,8 @@ export {default as MoreFeaturesCard} from "./Reuseable/MoreFeaturesCard"
 export {default as ImprovementSection} from "./HomePageComponents/ImprovementSection"
 export {default as WorkwaysDetailsCard} from "./Reuseable/WorkwaysDetailsCard"
 export {default as LanguageSelector} from "../components/Header/LanguageSelector"
-export {default as ScrollToTop} from "../components/Reuseable/ScrollToTop"
-export {default as ScrollBox} from "../components/Reuseable/ScrollBox"
+
+
 
 
 
