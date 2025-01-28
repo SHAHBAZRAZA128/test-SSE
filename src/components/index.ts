@@ -1,6 +1,6 @@
 
 export {default as Header} from "../components/Header/Header"
-export {default as Footer} from "../components/Footer/Footer"
+export {default as MainLayoutFooter} from "../components/Footer/MainLayoutFooter"
 export {default as FooterAds} from "../components/Footer/FooterAds"
 export {default as ColumnLinks} from "./Shared/ColumnLinks"
 export {default as HeroSection} from "./HomePageComponents/HeroSection"
@@ -30,6 +30,8 @@ export {default as MoreFeaturesCard} from "./Reuseable/MoreFeaturesCard"
 export {default as ImprovementSection} from "./HomePageComponents/ImprovementSection"
 export {default as WorkwaysDetailsCard} from "./Reuseable/WorkwaysDetailsCard"
 export {default as LanguageSelector} from "../components/Header/LanguageSelector"
+export {default as AuthLayoutFooter} from "../components/Footer/AuthLayoutFooter"
+export {default as PasswordField} from "../components/Reuseable/PasswordField"
 
 
 

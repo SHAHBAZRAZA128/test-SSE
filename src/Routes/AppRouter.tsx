@@ -1,5 +1,6 @@
 
 
+import AuthLayout from "../../src/Layout/AuthLayout"
 import MainLayout from "../../src/Layout/MainLayout"
 
 import { HomePage, CustomersPage, PricingPage, InspectionPage, IntegrationPage, AssetsPage, MonitoringPage, TrainingPage, PlatformPage, LoneworkerPage, MarketplacePage, InsurancePage, DocumentationPage, MiningPage, ConstructionPage, ManufacturingPage, FacilitiesPage, HospatalityPage, TransportPage, SustainabilityPage, HealthandSafetyPage, RiskandCompliancePage, OperationalPage, RetailPage, EnterprisePage, HelpCenterPage, ContactusPage, CommunityPage, SignupPage, LoginPage } from "../pages/index"
@@ -43,9 +44,13 @@ const AppRouter: React.FC = () => {
                     <Route path="/safetyculture-help-center" element={<HelpCenterPage />} />
                     <Route path="/safetyculture-contact-us" element={<ContactusPage />} />
                     <Route path="/safetyculture-community" element={<CommunityPage />} />
-                    <Route path="/sign-up" element={<SignupPage />} />
                 </Route>
+                <Route element={<AuthLayout />}>
+                    
+                    <Route path="/sign-up" element={<SignupPage />} />
                     <Route path="/login" element={<LoginPage />} />
+
+                </Route>
 
             </Routes>
         </>

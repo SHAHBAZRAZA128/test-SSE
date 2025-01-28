@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { SafetyCulturelogo, Closeicon , ConversationEmpty,Chaticon } from "../../assets/index"
+import {  Closeicon , ConversationEmpty,Chaticon, SmallLogo } from "../../assets/index"
 import {ButtonField} from "../index";
 
 
@@ -17,11 +17,11 @@ const Chat: React.FC = () => {
             {isChatOpen ? (
                 <div className={`bg-gray-100 h-[550px] w-[380px] fixed z-[60] right-12 bottom-[70px] rounded-xl shadow-xl border-2  border-b-2  group-hover:translate-y-[-5px] transform transition-all duration-100`}>
                     <div className="h-40 flex flex-col justify-between items-center px-8">
-                        <img className="w-4 h-4 mt-4 relative left-40 rounded-full" 
+                        <img className="w-4 h-4 mt-4 relative left-40 rounded-full cursor-pointer hover:bg-gray-300" 
                         src={Closeicon} 
                         alt="icon" 
                         onClick={toggleChat}/>
-                        <img className="h-8 w-10 rounded-full" src={SafetyCulturelogo}></img>
+                        <img className="h-8 w-10 rounded-full" src={SmallLogo}></img>
                         <h1 className="text-gray-800 font-medium leading-none">SafetyCulture Support</h1>
                         <p className="mb-8 text-sm text-gray-800">By starting a chat, you consent to us recording <span className="block text-center leading-none">the chat as per our Privacy Policy.</span></p>
                     </div>
