@@ -1,0 +1,16 @@
+export { default as CompanyName } from "./CompanyName.svg";
+export { default as Home_icon } from "./Home_icon.svg";
+export { default as Dashboard_icon } from "./Dashboard_icon.svg";
+export { default as Client_icon } from "./Client_icon.svg";
+export { default as Entities_icon } from "./Entities_icon.svg";
+export { default as Add_Entity_icon } from "./Add_Entity_icon.svg";
+export { default as Calendar_icon } from "./Calendar_icon.svg";
+export { default as Notification_icon } from "./Notification_icon.svg";
+export { default as Reports_icon } from "./Reports_icon.svg";
+export { default as bell_icon } from "./bell_icon.svg";
+export { default as Signin_icon } from "./Signin_icon.svg";
+export { default as Search_icon } from "./Search_icon.svg";
+export { default as Dip_icon } from "./Dip_icon.svg";
+export { default as Inventory_icon } from "./Inventory_icon.svg";
+export { default as Social_icon } from "./Social_icon.svg";
+export { default as SeeAll_icon } from "./SeeAll_icon.svg";
