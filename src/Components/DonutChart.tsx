@@ -51,6 +51,7 @@ function DonutChart() {
               fontSize: "18px", // ✅ Bigger font size
               fontWeight: "bold",
               // colors: ['#000'], // ✅ Black text color
+              
             },
             background: {
               enabled: true,
@@ -61,6 +62,7 @@ function DonutChart() {
               borderWidth: 2,
               // borderColor: 'white',
               //className: 'apexcharts-datalabel-label' ,
+              
               // ✅ Black border
               dropShadow: {
                 enabled: true,
@@ -71,6 +73,9 @@ function DonutChart() {
               },
             },
           },
+          
+           
+          
           legend: {
             show: false,
             position: "right", // ✅ Labels ko side pe dikhane ke liye

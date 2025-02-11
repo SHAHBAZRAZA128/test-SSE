@@ -5,4 +5,6 @@ export interface InfoCardProps {
   chartData?: number[];
   color: string;
   type: any;
+  className:string;
+  
 }

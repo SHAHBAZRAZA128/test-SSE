@@ -108,11 +108,7 @@ function BarChat() {
             },
             dataLabels: {
               enabled: false,
-              //   formatter: (val) => `$${val}`,
-              //   style: {
-              //     colors: ["#f4f4f4"],
-              //     fontSize: "15px",
-              //   },
+              
             },
           }}
         />

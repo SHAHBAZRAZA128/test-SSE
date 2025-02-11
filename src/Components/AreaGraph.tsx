@@ -55,20 +55,20 @@ function AreaGraph() {
               stroke: {
                 curve: "smooth", // Smooth curve
                 dashArray: 3,
-                width: 1, // 👈 Dotted line (adjust value for different styles)
+                width: 1, 
               },
               grid: {
                 show: true,
 
-                strokeDashArray: 0, // 👈 Dotted nahi, solid lines hon
+                strokeDashArray: 0, 
                 xaxis: {
                   lines: {
-                    show: true, // 👈 X-axis ke grid lines dikhayega
+                    show: true, 
                   },
                 },
                 yaxis: {
                   lines: {
-                    show: true, // 👈 Y-axis ke grid lines dikhayega
+                    show: true, 
                   },
                 },
               },
@@ -94,9 +94,9 @@ function AreaGraph() {
                 type: "gradient",
                 gradient: {
                   shadeIntensity: 1,
-                  type: "vertical", // 👈 Gradient direction (vertical/horizontal)
+                  type: "vertical", 
                   gradientToColors: ["#25CD25"], // 👈 End color
-                  stops: [0, 40], // 👈 Gradient stops (0% to 100%)
+                  stops: [0, 40], 
                 },
               },
               colors: ["#25CD25"],
@@ -104,7 +104,7 @@ function AreaGraph() {
               // fill:{opacity:1 , type:'solid'}
 
               xaxis: {
-                tickAmount: 8, // 👈 Ensure all years fit properly
+                tickAmount: 8, 
                 categories: [
                   "2016",
                   "2017",
@@ -114,7 +114,7 @@ function AreaGraph() {
                   "2021",
                   "2022",
                   "2023",
-                ], // 👈 Ensure years are in string format
+                ], // 
               },
             }}
           />

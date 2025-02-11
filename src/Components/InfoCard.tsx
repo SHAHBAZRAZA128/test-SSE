@@ -9,6 +9,8 @@ const InfoCard: React.FC<InfoCardProps> = ({
   chartData,
   color,
   type,
+  className,
+  
 }) => {
   const chartOptions: ApexOptions = {
     chart: {
@@ -24,11 +26,11 @@ const InfoCard: React.FC<InfoCardProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-4 w-[190px] h-[150px]">
+    <div className={`rounded-2xl shadow-lg p-4 w-[190px] h-[150px] ${className}`}>
       <p className="text-2xl font-semibold">{value}</p>
       <h3 className="text-gray-500 text-sm">{title}</h3>
       <div className="flex">
-        <p className="text-sm text-gray-400 mt-12">{percentage}%</p>
+        <p className="text-sm text-black mt-12 font-bold">{percentage}%</p>
         <div className="mt-4">
           <Chart
             options={chartOptions}

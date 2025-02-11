@@ -13,7 +13,7 @@ import ReferalBarChart from "../Components/ReferalBarChat";
 
 function Dashboard() {
   return (
-    <div className="flex  ">
+    <div className="flex  font-latoo">
       <Navbar />
       <div className=" bg-[#E0E1E2] w-[1600px] gap-[10px] pr-6 flex flex-col">
         <div className="flex justify-between items-center mt-10">
@@ -58,6 +58,7 @@ function Dashboard() {
             chartData={[40, 20, 30]}
             type="bar"
             color="#EA9010"
+            className="bg-[#F9ECE3CC]"
           />
           <InfoCard
             title="Pending Entities"
@@ -67,6 +68,7 @@ function Dashboard() {
             type="area"
             color="
 #00D9C0"
+className="bg-[#F6FFFE]"
           />
           <InfoCard
             title="Active Entities"
@@ -76,15 +78,17 @@ function Dashboard() {
             type="area"
             color="
 #EA9010"
+className="bg-[#FFFFFF66]"
           />
           <InfoCard
             title="In-active Entities"
             value="8.1"
             percentage="8"
-            chartData={[4, 6, 10]}
+            chartData={[6, 4, 10]}
             type="bar"
             color="
 #4AB7FF"
+className="bg-[#E3F4FF]"
           />
         </div>
         <div className="flex gap-4 my-4">
