@@ -1,5 +1,3 @@
-import { bell_icon, Search_icon, Signin_icon } from "../assets";
-
 import {
   InfoCard,
   AreaGraph,
@@ -8,103 +6,102 @@ import {
   Navbar,
   DonutChart,
   HeatmapChart,
+  TotalEntityBarChart,
+  PendingEntityBarChart,
+  ActiveEntityBarChart,
+  InActiveEntityBarChart,
+  Header,
 } from "../Components";
-import ReferalBarChart from "../Components/ReferalBarChat";
+import ReferalBarChart from "../Components/Charts/ReferalBarChat";
 
 function Dashboard() {
-  return (
-    <div className="flex  font-latoo">
-      <Navbar />
-      <div className=" bg-[#E0E1E2] w-[1600px] gap-[10px] pr-6 flex flex-col">
-        <div className="flex justify-between items-center mt-10">
-          <h1>Dashboard</h1>
+  const infoCards = [
+    {
+      title: "Total Entities",
+      value: "12,345",
+      percentage: "38.6",
+      className: "bg-[#F9ECE3]/80",
+      ChartComponent: TotalEntityBarChart,
+    },
+    {
+      title: "Pending Entities",
+      value: "125",
+      percentage: "22",
+      className: "bg-[#F6FFFE]",
+      ChartComponent: PendingEntityBarChart,
+    },
+    {
+      title: "Active Entities",
+      value: "30",
+      percentage: "30",
+      className: "bg-[#FFFFFF66]",
+      ChartComponent: ActiveEntityBarChart,
+    },
+    {
+      title: "In-active Entities",
+      value: "8.1",
+      percentage: "8",
+      className: "bg-[#E3F4FF]",
+      ChartComponent: InActiveEntityBarChart,
+    },
+  ];
 
-          <div className="flex h-[30px]">
-            <button className="w-[100px] bg-[#FF0000] text-white rounded-xl">
-              Add Entity
-            </button>
-            <img
-              className="w-[15px] h-[15px] relative left-5 top-2"
-              src={Search_icon}
-              alt="search_icon"
-            />
-            <input
-              placeholder="Type here.."
-              className="w-[334px] rounded-xl px-6"
-              type="text"
-            ></input>
-            <div className="flex pl-3">
-              <img
-                className="w-[24px] h-[24px]"
-                src={bell_icon}
-                alt="bell_icon"
-              />
-              <img
-                className="w-[24px] h-[24px]"
-                src={Signin_icon}
-                alt="signin_icon"
-              />
-              <span>Sign In</span>
-            </div>
+  return (
+    <div className="flex font-latoo">
+      <Navbar />
+      <div className="bg-[#E0E1E2] desktop:ml-[230px] laptop:ml-[190px] w-full max-w-[1600px] mobile:w-full gap-[10px] pr-6 flex flex-col">
+        <Header />
+        <Alerts />
+        <h1 className="relative pl-2 tablet:top-12 text-[24px] tablet:text-[20px] mobile:top-[4%] mobile:left-[2%] mobile:text-[18px] tablet:left-11">
+          Renewal Status
+        </h1>
+
+        <div className="flex mobile:flex-col tablet:flex tablet:ml-10 gap-4 mt-6 mobile:mt-20 mobile:ml-5">
+          {/* Info Cards - Dynamically Rendered */}
+          <div className="flex gap-4">
+            {infoCards.slice(0, 2).map((card, index) => (
+              <InfoCard
+                key={index}
+                title={card.title}
+                value={card.value}
+                percentage={card.percentage}
+                className={card.className}
+              >
+                <card.ChartComponent />
+              </InfoCard>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            {infoCards.slice(2, 4).map((card, index) => (
+              <InfoCard
+                key={index}
+                title={card.title}
+                value={card.value}
+                percentage={card.percentage}
+                className={card.className}
+              >
+                <card.ChartComponent />
+              </InfoCard>
+            ))}
           </div>
         </div>
-        <Alerts />
 
-        <div className="flex gap-4 mt-6">
-          <InfoCard
-            title="Total Entities"
-            value="12,345"
-            percentage="38.6"
-            chartData={[40, 20, 30]}
-            type="bar"
-            color="#EA9010"
-            className="bg-[#F9ECE3CC]"
-          />
-          <InfoCard
-            title="Pending Entities"
-            value="125"
-            percentage="22"
-            chartData={[0, 150, 50, 130]}
-            type="area"
-            color="
-#00D9C0"
-className="bg-[#F6FFFE]"
-          />
-          <InfoCard
-            title="Active Entities"
-            value="30"
-            percentage="30"
-            chartData={[100, 190, 80, 250, 50]}
-            type="area"
-            color="
-#EA9010"
-className="bg-[#FFFFFF66]"
-          />
-          <InfoCard
-            title="In-active Entities"
-            value="8.1"
-            percentage="8"
-            chartData={[6, 4, 10]}
-            type="bar"
-            color="
-#4AB7FF"
-className="bg-[#E3F4FF]"
-          />
-        </div>
-        <div className="flex gap-4 my-4">
+        <div className="flex gap-4 my-4 laptop:pl-20 laptop:flex-col mobile:flex-col tablet:ml-10">
           <AreaGraph />
           <ReferalBarChart />
         </div>
 
-        <div className="flex gap-4 ">
+        <div className="laptop:flex-col laptop:pl-20 flex gap-4 mobile:flex-col tablet:ml-10">
           <HeatmapChart />
           <DonutChart />
         </div>
-        <div className="mt-[-130px]">
+
+        <div className="laptop:w-[600px] laptop:mt-10 laptop:pl-20 mt-[-130px] mobile:mt-[10px] tablet:ml-10 tablet:mt-[-10px]">
           <SuccessBarChart />
         </div>
       </div>
     </div>
   );
 }
+
 export default Dashboard;

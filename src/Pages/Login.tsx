@@ -3,6 +3,7 @@ import { useState } from "react";
 import { loginSchema } from "../schemas/loginSchema";
 import { Link, useNavigate } from "react-router-dom";
 import useNotification from "../hooks/useNotification";
+import { userAuth } from "../Context/AuthContext";
 import { Eye, EyeOff } from "lucide-react";
 const initialValues = {
   email: "",
@@ -13,6 +14,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { notifySuccess, notifyError } = useNotification();
   const navigate = useNavigate();
+  const user = userAuth();
 
   const { handleBlur, handleChange, errors, touched, handleSubmit, values } =
     useFormik({
@@ -28,6 +30,7 @@ const Login = () => {
         ) {
           notifySuccess("Login Successful!");
           localStorage.setItem("isAuthenticated", JSON.stringify(true));
+          user?.login({savedUser})
           setTimeout(() => navigate("/dashboard"), 3000);
         } else {
           notifyError("Invalid Email or Password");
