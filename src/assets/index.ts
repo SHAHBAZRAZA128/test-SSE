@@ -14,3 +14,4 @@ export { default as Dip_icon } from "./Dip_icon.svg";
 export { default as Inventory_icon } from "./Inventory_icon.svg";
 export { default as Social_icon } from "./Social_icon.svg";
 export { default as SeeAll_icon } from "./SeeAll_icon.svg";
+export { default as hamburger_icon } from "./hamburger.png";

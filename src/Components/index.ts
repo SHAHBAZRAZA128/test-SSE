@@ -1,8 +1,13 @@
-export { default as AreaGraph } from "./AreaGraph";
-export { default as SuccessBarChart } from "./SuccessBarChart";
+export { default as AreaGraph } from "./Charts/AreaGraph";
+export { default as SuccessBarChart } from "./Charts/SuccessBarChart";
 export { default as InfoCard } from "./InfoCard";
 export { default as AlertCards } from "./AlertCards";
 export { default as Alerts } from "./Alerts";
-export { default as DonutChart } from "./DonutChart";
+export { default as DonutChart } from "./Charts/DonutChart";
 export { default as Navbar } from "./Navbar";
-export { default as HeatmapChart } from "./HeatmapChart";
+export { default as HeatmapChart } from "./Charts/HeatmapChart";
+export { default as TotalEntityBarChart } from "./Charts/TotalEntityBarChart";
+export { default as PendingEntityBarChart } from "./Charts/PendingEntityBarChart";
+export { default as ActiveEntityBarChart } from "./Charts/ActiveEntityBarChart";
+export { default as InActiveEntityBarChart } from "./Charts/InActiveEntityBarChart";
+export { default as Header } from "./Header";

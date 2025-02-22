@@ -3,12 +3,12 @@ import { signupSchema } from "../schemas/signupSchema";
 import useNotification from "../hooks/useNotification";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useDropzone } from "react-dropzone";
+import useHttp from "../hooks/useHttp";
 
 const initialValues = {
   email: "",
@@ -16,7 +16,7 @@ const initialValues = {
   lastName: "",
   password: "",
   confirm_password: "",
-  checkInTime: null,
+  checkInTime:  null as Date | null,
   agreeToTerms: false,
 };
 
@@ -38,9 +38,10 @@ function Signup() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const { notifySuccess, notifyError } = useNotification();
+  const {request} = useHttp();
   const navigate = useNavigate();
-
+  const { notifyError } = useNotification();
+  
   const {
     values,
     handleBlur,
@@ -52,57 +53,27 @@ function Signup() {
   } = useFormik({
     initialValues,
     validationSchema: signupSchema,
-    onSubmit: async (values, action) => {
-      try {
-        const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
-        storedUsers.push(values);
-        localStorage.setItem("users", JSON.stringify(storedUsers));
-
-        const response = await axios.post(
-          "https://jsonplaceholder.typicode.com/posts",
-          values,
-          {
-            headers: { "Content-Type": "application/json" },
-          },
-        );
-
-        if (response.status === 201 || response.status === 200) {
-          notifySuccess("Signup Successful!");
-          localStorage.setItem("user", JSON.stringify(response.data));
-          action.resetForm();
-          setTimeout(() => navigate("/login"), 2000);
-        } else {
-          notifyError("Signup failed. Please try again.");
-        }
-      } catch (error) {
-        console.error("Signup Error:", error);
-        notifyError("Something went wrong. Please try again.");
-      }
-
+    onSubmit: async (values) => {
       if (!file) {
-        alert("Please upload a file before submitting.");
+        notifyError("Please upload file .");
         return;
       }
 
       const formData = new FormData();
-      formData.append("file", file);
+      formData.append("email", values.email);
+      formData.append("firstName", values.firstName);
+      formData.append("lastName", values.lastName);
+      formData.append("password", values.password);
+      formData.append("confirm_password", values.confirm_password);
+      formData.append("checkInTime", values.checkInTime ? values.checkInTime.toISOString() : "");
+      formData.append("agreeToTerms", values.agreeToTerms.toString());
+      
 
-      try {
-        const uploadResponse = await axios.post(
-          "https://jsonplaceholder.typicode.com/posts",
-          values,
-          {
-            headers: { "Content-Type": "application/json" },
-          },
-        );
+        const response = await request("https://jsonplaceholder.typicode.com/posts", formData, true);
 
-        if (uploadResponse.status === 201 || uploadResponse.status === 200) {
-          notifySuccess("File uploaded successfully!");
-        } else {
-          notifyError("File upload failed.");
-        }
-      } catch (uploadError) {
-        console.error("Upload error:", uploadError);
+      if (response) {
+        localStorage.setItem("user", JSON.stringify(response));
+        setTimeout(() => navigate("/login"), 2000);
       }
     },
   });

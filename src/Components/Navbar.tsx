@@ -1,81 +1,73 @@
+import { useState } from "react";
 import {
   Add_Entity_icon,
   Client_icon,
   CompanyName,
   Dashboard_icon,
   Entities_icon,
+  hamburger_icon,
   Home_icon,
   Notification_icon,
   Reports_icon,
 } from "../assets";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const showNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const menuItems = [
+    { label: "Home", icon: Home_icon },
+    { label: "Dashboard", icon: Dashboard_icon },
+    { label: "Client", icon: Client_icon },
+    { label: "Entities", icon: Entities_icon },
+    { label: "Add Entities", icon: Add_Entity_icon },
+    { label: "Calendar", icon: Notification_icon },
+    { label: "Notification", icon: Notification_icon },
+    { label: "Reports", icon: Reports_icon },
+  ];
+
   return (
-    <div className="pl-[24.5px] w-[233.5px]  bg-[#E0E1E2] pt-10">
-      <img className="mb-8" src={CompanyName} alt="company" />
-      <div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img className="w-[30px] h-[30px]" src={Home_icon} alt="home_icon" />
-          <span>Home</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
+    <div>
+      {!isOpen && (
+        <div className="desktop:hidden laptop:hidden tablet:left-10 tablet:top-11 absolute top-4 left-4 z-50">
           <img
-            className="w-[30px] h-[30px]"
-            src={Dashboard_icon}
-            alt="dashboard_icon"
+            className="cursor-pointer w-[20px] h-[20px]"
+            src={hamburger_icon}
+            alt="hamburger_icon"
+            onClick={showNavbar}
           />
-          <span>Dashboard</span>
         </div>
-        <div className="flex gap-[10px] p-[10px]  w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Client_icon}
-            alt="client_icon"
-          />
-          <span>Client</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Entities_icon}
-            alt="entities_icon"
-          />
-          <span>Entities</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Add_Entity_icon}
-            alt="add_entities_icon"
-          />
-          <span>Add Entities</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Notification_icon}
-            alt="calendar_icon"
-          />
-          <span>Calendar</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Notification_icon}
-            alt="notification_icon"
-          />
-          <span>Notification</span>
-        </div>
-        <div className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]">
-          <img
-            className="w-[30px] h-[30px]"
-            src={Reports_icon}
-            alt="reports_icon"
-          />
-          <span>Reports</span>
+      )}
+      <div
+        className={`fixed top-0 left-0 h-full pl-[24.5px] laptop:w-[190px] w-[233.5px] bg-[#E0E1E2] pt-10 transform
+      ${isOpen ? "translate-x-0" : "-translate-x-full"}    
+     desktop:translate-x-0 desktop:transform-none desktop:transition-none 
+     laptop:translate-x-0 laptop:transform-none laptop:transition-none 
+      transition-transform duration-300 ease-in-out z-40 mobile:overflow-y-scroll`}
+      >
+        <button
+          onClick={showNavbar}
+          className="absolute top-3 left-[210px] desktop:hidden laptop:hidden"
+        >
+          ✖
+        </button>
+        <img className="mb-8" src={CompanyName} alt="company" />
+        <div>
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className="flex gap-[10px] p-[10px] w-[219px] h-[50px] text-[16px] leading-[20px]"
+            >
+              <img className="w-[30px] h-[30px]" src={item.icon} alt={item.label.toLowerCase() + "_icon"} />
+              <span>{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
 export default Navbar;
