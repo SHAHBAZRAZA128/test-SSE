@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>Todo List with Pure JS</title>
+</head>
+<body>
+    <div class="w-full h-screen  flex justify-center ">
+        <div class=" bg-blue-300 max-h-full  p-20 w-[600px] ">
+            <h1 class="text-center font-bold text-4xl mb-14">To do Lists</h1>
+            <form id="form">
+                <div class="flex space-x-2">                
+                <input id="todotask" class="w-[300px] p-1.5 ml-14 focus:outline-none" type="text" value="">
+                
+                <button id="add" class="bg-blue-900 text-white px-2">Add </button>
+                
+                
+            </div>
+            <p id="inputerror" className="text-[12px] text-red-600 pl-14 font-bold">
+               </p>
+            <div class="pl-10" id="itemscontainer">
+                
+            </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

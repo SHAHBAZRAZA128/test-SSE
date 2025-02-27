@@ -1,0 +1,23 @@
+# Node modules (important)
+node_modules/
+npm-debug.log*
+
+# Build files
+dist/
+build/
+
+# Tailwind CSS cache & output
+*.css.map
+postcss.config.js
+tailwind.config.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE & OS Specific Files
+.DS_Store
+.vscode/
+.idea/
+*.log
